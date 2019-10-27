@@ -1,0 +1,17 @@
+{% import "Bootstrap/wtf.html" as wtf %}
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Register
+{% endblock title %}
+
+{% block body %}
+    <div class="content-section">
+        <div class="center">
+            <h1>Register New Employee</h1>
+        <br>
+        {{wtf.quick_form(form)}}
+        </div>
+    </div>
+{% endblock body %}
+    

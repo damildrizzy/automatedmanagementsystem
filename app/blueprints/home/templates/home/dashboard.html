@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+<div id="mainwrap">
+        <img src="../../static/img/avatar.png" id="avatar">
+        <p id="cname">{{current_user.first_name}} {{current_user.last_name}}</p>
+        <br>
+        <div> <span id="mail"><i class="fa fa-envelope"></i><a href="mailto:{{current_user.email}}">  {{current_user.email}}</a></span></div>
+        <br>
+        <div> <span id="roles"><i class="fa fa-vcard-o"></i>  {{current_user.role}}</span></div>
+        <br>
+        <div> <span id="depart"><i class="fa fa-building"></i>  {{current_user.department}}</span></div>
+        <hr>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="false" aria-controls="collapseProfile">
+                View Profile
+        </button>
+        
+    </div>
+    <div class="collapse" id="collapseProfile">
+            <div class="userDetails">
+                <p>Name: <span>{{current_user.first_name}} {{current_user.last_name}}</span> </p>
+                <p>Role: <span>{{current_user.role}}</span></p>
+                <p>Department:  <span>{{current_user.department}}</span></p>
+                <p>Educational Qualification: <span>{{current_user.educational_qualification}}</span> </p>
+                <p>Date of First Appointment: <span>{{current_user.date_of_first_appointment}}</span> </p>
+                <p>Date of Birth: <span></span> {{current_user.date_of_birth}}</p>
+                <p>Next of Kin: <span>{{current_user.next_of_kin}}</span>  </p>
+                <p>Address: <span>{{current_user.address}}</span> </p>
+                <p>Phone Number: <span>{{current_user.phone_number}}</span> </p>
+                <p>Marital Status: <span>{{current_user.marital_status}}</span> </p>
+
+            </div>
+
+        </div>
+{% endblock %}

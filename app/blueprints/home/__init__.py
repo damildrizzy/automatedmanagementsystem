@@ -1,0 +1,1 @@
+from app.blueprints.home.views import home
