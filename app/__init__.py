@@ -27,7 +27,7 @@ def create_app():
     app.config.from_object('config.settings')
     app.config.from_pyfile('settings.py')
 
-    Bootstrap(app)
+    bootstrap = Bootstrap(app)
     db.init_app(app)
     ma.init_app(app)
     login_manager.init_app(app)

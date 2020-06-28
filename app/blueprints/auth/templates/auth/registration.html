@@ -1,4 +1,4 @@
-{% import "Bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/form.html" as wtf %}
 {% extends 'layouts/base.html' %}
 
 {% block title %}
@@ -10,7 +10,7 @@
         <div class="center">
             <h1>Register New Employee</h1>
         <br>
-        {{wtf.quick_form(form)}}
+        {{wtf.render_form(form)}}
         </div>
     </div>
 {% endblock body %}

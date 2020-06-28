@@ -148,7 +148,7 @@ def delete_role(id):
     role = Role.query.get_or_404(id)
     db.session.delete(role)
     db.session.commit()
-    flash('Ypu have succesfully deleted the role')
+    flash('You have succesfully deleted the role')
 
     return redirect(url_for('admin.list_roles'))
 

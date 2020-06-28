@@ -8,6 +8,7 @@ def homepage():
     return render_template('home/index.html', title='Welcome')
 
 @home.route('/dashboard')
+@login_required
 def dashboard():
     return render_template('home/dashboard.html', title='Dashboard')
 

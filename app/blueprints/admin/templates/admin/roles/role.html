@@ -1,4 +1,4 @@
-{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/form.html" as wtf %}
 {% extends "layouts/base.html" %}
 {% block title %}
     {% if add_department %}
@@ -19,7 +19,7 @@
                 <h1>Edit Role</h1>
             {% endif %}
             <br/>
-            {{ wtf.quick_form(form) }}
+            {{ wtf.render_form(form) }}
         </div>
       </div>
     </div>

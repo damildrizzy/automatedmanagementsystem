@@ -1,5 +1,5 @@
-{% import "Bootstrap/utils.html" as utils %}
-{% import "Bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/form.html" as wtf %}
 {% extends 'layouts/base.html' %}
 
 {% block title %}
@@ -9,12 +9,12 @@
 {% block body %}
     <div class="content-section">
         <br>
-        {{utils.flashed_messages()}}
+        {{utils.render_messages()}}
         <br>
         <div class="center">
             Login To Your Account
         <br>
-        {{wtf.quick_form(form)}}
+        {{wtf.render_form(form)}}
         </div>
     </div>
 {% endblock body %}
